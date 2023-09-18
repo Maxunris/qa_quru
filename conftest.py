@@ -10,4 +10,4 @@ def open_browser():
 
 @pytest.fixture(scope="session")
 def setting_browser():
-    browser.driver.set_window_size(499, 700)
+    browser.driver.set_window_size(499, 600)
