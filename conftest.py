@@ -1,13 +1,8 @@
 import pytest
-from selene import browser, have
+from selene import browser
 
 
-
-@pytest.fixture(scope="session")
-def open_browser():
-    browser.open("https://www.google.com/")
-
-
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="session", autouse=True)
 def setting_browser():
-    browser.driver.set_window_size(499, 600)
+    browser.config.window_width = 1920
+    browser.config.window_height = 720
